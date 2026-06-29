@@ -1,0 +1,1191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Hs Austral sas - Soluciones Industriales</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* =========================
+RESET
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* =========================
+BODY
+========================= */
+
+body{
+
+    font-family:'Roboto', sans-serif;
+
+    background:
+    linear-gradient(
+    to bottom,
+    #050b14,
+    #07111f,
+    #0b1724
+    );
+
+    color:white;
+
+    overflow-x:hidden;
+}
+
+/* =========================
+SCROLLBAR
+========================= */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#07111f;
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:
+    linear-gradient(
+    180deg,
+    #f2b705,
+    #00E5FF
+    );
+
+    border-radius:20px;
+}
+
+/* =========================
+HEADER
+========================= */
+
+header{
+
+    background:rgba(2,11,24,0.95);
+
+    backdrop-filter:blur(8px);
+
+    border-bottom:2px solid #f2b705;
+
+    position:sticky;
+
+    top:0;
+
+    z-index:999;
+
+    transition:0.3s;
+
+    box-shadow:
+    0 0 20px rgba(0,0,0,0.35);
+}
+
+/* =========================
+CONTAINER
+========================= */
+
+.container{
+
+    width:90%;
+
+    max-width:1400px;
+
+    margin:auto;
+}
+
+/* =========================
+NAVBAR
+========================= */
+
+.navbar{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:20px 0;
+}
+
+/* =========================
+LOGO
+========================= */
+
+.logo{
+
+    font-family:'Oswald', sans-serif;
+
+    font-size:42px;
+
+    font-weight:700;
+
+    color:white;
+
+    letter-spacing:1px;
+}
+
+.logo span{
+
+    color:#f2b705;
+
+    text-shadow:
+    0 0 10px rgba(242,183,5,0.45),
+    0 0 25px rgba(0,229,255,0.12);
+}
+
+/* =========================
+MENU
+========================= */
+
+.nav-links{
+
+    display:flex;
+
+    gap:30px;
+}
+
+.nav-links a{
+
+    text-decoration:none;
+
+    color:white;
+
+    font-weight:500;
+
+    transition:0.3s;
+
+    position:relative;
+}
+
+.nav-links a::after{
+
+    content:'';
+
+    position:absolute;
+
+    left:0;
+    bottom:-8px;
+
+    width:0%;
+
+    height:2px;
+
+    background:#f2b705;
+
+    transition:0.3s;
+}
+
+.nav-links a:hover{
+
+    color:#f2b705;
+}
+
+.nav-links a:hover::after{
+
+    width:100%;
+}
+
+/* =========================
+HERO
+========================= */
+
+.hero{
+
+    height:90vh;
+
+    background:
+    linear-gradient(rgba(0,0,0,0.60), rgba(0,0,0,0.72)),
+    url('img/portada.jpg');
+
+    background-size:cover;
+
+    background-position:center;
+
+    display:flex;
+
+    align-items:center;
+
+    position:relative;
+}
+
+.hero::before{
+
+    content:'';
+
+    position:absolute;
+
+    width:100%;
+    height:100%;
+
+    background:
+    radial-gradient(circle at center, rgba(0,229,255,0.05), transparent 60%);
+}
+
+.hero-content{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:760px;
+}
+
+.hero h1{
+
+    font-family:'Oswald', sans-serif;
+
+    font-size:76px;
+
+    line-height:1.1;
+
+    margin-bottom:22px;
+
+    text-transform:uppercase;
+}
+
+.hero h1 span{
+
+    color:#f2b705;
+
+    text-shadow:
+    0 0 12px rgba(242,183,5,0.30);
+}
+
+.hero p{
+
+    font-size:22px;
+
+    line-height:1.8;
+
+    margin-bottom:38px;
+
+    color:#dddddd;
+}
+
+/* =========================
+BUTTONS
+========================= */
+
+.buttons{
+
+    display:flex;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+}
+
+.btn{
+
+    padding:16px 30px;
+
+    border:none;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    border-radius:8px;
+
+    transition:0.35s;
+
+    text-decoration:none;
+
+    letter-spacing:0.5px;
+}
+
+/* =========================
+YELLOW BUTTON
+========================= */
+
+.btn-yellow{
+
+    background:#f2b705;
+
+    color:#000;
+
+    box-shadow:
+    0 0 15px rgba(242,183,5,0.20);
+}
+
+.btn-yellow:hover{
+
+    background:#ffd84d;
+
+    transform:translateY(-4px);
+
+    box-shadow:
+    0 0 20px rgba(242,183,5,0.35);
+}
+
+/* =========================
+DARK BUTTON
+========================= */
+
+.btn-dark{
+
+    border:2px solid rgba(255,255,255,0.85);
+
+    color:white;
+
+    background:transparent;
+}
+
+.btn-dark:hover{
+
+    background:white;
+
+    color:black;
+
+    transform:translateY(-4px);
+}
+
+/* =========================
+FEATURES
+========================= */
+
+.features{
+
+    background:#08172b;
+
+    padding:50px 0;
+
+    border-top:1px solid rgba(255,255,255,0.04);
+
+    border-bottom:1px solid rgba(255,255,255,0.04);
+}
+
+.features-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+
+    gap:30px;
+}
+
+.feature-box{
+
+    background:
+    linear-gradient(
+    145deg,
+    rgba(15,25,38,0.95),
+    rgba(8,16,28,0.95)
+    );
+
+    border-radius:12px;
+
+    padding:30px;
+
+    text-align:center;
+
+    transition:0.35s;
+
+    border:1px solid rgba(255,255,255,0.05);
+}
+
+.feature-box:hover{
+
+    transform:translateY(-6px);
+
+    border:1px solid rgba(242,183,5,0.22);
+
+    box-shadow:
+    0 0 18px rgba(242,183,5,0.08);
+}
+
+.feature-box h3{
+
+    color:#f2b705;
+
+    margin-bottom:14px;
+
+    font-size:25px;
+
+    font-family:'Oswald', sans-serif;
+}
+
+.feature-box p{
+
+    color:#d8d8d8;
+
+    line-height:1.7;
+}
+
+/* =========================
+SECTION TITLE
+========================= */
+
+.section-title{
+
+    text-align:center;
+
+    font-family:'Oswald', sans-serif;
+
+    font-size:52px;
+
+    margin:80px 0 50px;
+
+    text-transform:uppercase;
+
+    letter-spacing:1px;
+}
+
+/* =========================
+SERVICES
+========================= */
+
+.services{
+
+    padding-bottom:90px;
+}
+
+.cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));
+
+    gap:32px;
+}
+
+/* =========================
+CARD
+========================= */
+
+.card{
+
+    background:#08172b;
+
+    border:1px solid rgba(255,255,255,0.08);
+
+    overflow:hidden;
+
+    transition:0.45s;
+
+    border-radius:12px;
+
+    position:relative;
+
+    box-shadow:
+    0 5px 15px rgba(0,0,0,0.25);
+}
+
+.card::before{
+
+    content:'';
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:2px;
+
+    background:
+    linear-gradient(
+    90deg,
+    transparent,
+    rgba(0,229,255,0.75),
+    transparent
+    );
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+    border:1px solid rgba(0,229,255,0.40);
+
+    box-shadow:
+    0 0 18px rgba(0,229,255,0.18),
+    0 0 40px rgba(0,229,255,0.08);
+}
+
+/* =========================
+CARD IMAGE
+========================= */
+
+.card img{
+
+    width:100%;
+
+    height:220px;
+
+    object-fit:cover;
+
+    transition:0.45s;
+
+    border-bottom:
+    2px solid rgba(0,229,255,0.22);
+}
+
+.card:hover img{
+
+    transform:scale(1.025);
+}
+
+/* =========================
+CARD CONTENT
+========================= */
+
+.card-content{
+
+    padding:25px;
+}
+
+.card-content h3{
+
+    color:#f2b705;
+
+    margin-bottom:15px;
+
+    font-size:28px;
+
+    font-family:'Oswald', sans-serif;
+}
+
+.card-content p{
+
+    line-height:1.8;
+
+    color:#dddddd;
+}
+
+/* =========================
+SALE BOX
+========================= */
+
+.sale-box{
+
+    background:
+    linear-gradient(
+    145deg,
+    rgba(12,24,38,0.96),
+    rgba(8,18,30,0.96)
+    );
+
+    border:2px solid #f2b705;
+
+    border-radius:14px;
+
+    margin-top:80px;
+
+    padding:38px;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    align-items:center;
+
+    gap:35px;
+
+    box-shadow:
+    0 0 20px rgba(242,183,5,0.08);
+}
+
+.sale-box img{
+
+    width:100%;
+
+    max-width:450px;
+
+    border-radius:10px;
+
+    border:1px solid rgba(255,255,255,0.08);
+}
+
+.sale-content h2{
+
+    font-family:'Oswald', sans-serif;
+
+    font-size:50px;
+
+    color:#f2b705;
+
+    margin-bottom:20px;
+}
+
+.sale-content h3{
+
+    font-size:34px;
+
+    margin-bottom:18px;
+}
+
+.sale-content p{
+
+    line-height:1.9;
+
+    margin-bottom:25px;
+
+    color:#dddddd;
+}
+
+/* =========================
+CONTACT
+========================= */
+
+.contact{
+
+    background:#020b18;
+
+    padding:80px 0;
+
+    margin-top:80px;
+}
+
+.contact-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));
+
+    gap:35px;
+}
+
+.contact-box{
+
+    background:
+    linear-gradient(
+    145deg,
+    rgba(10,18,30,0.95),
+    rgba(7,14,24,0.95)
+    );
+
+    padding:30px;
+
+    border-radius:12px;
+
+    border:1px solid rgba(255,255,255,0.05);
+
+    transition:0.35s;
+}
+
+.contact-box:hover{
+
+    transform:translateY(-5px);
+
+    border:1px solid rgba(242,183,5,0.18);
+}
+
+.contact-box h3{
+
+    color:#f2b705;
+
+    margin-bottom:15px;
+
+    font-size:30px;
+
+    font-family:'Oswald', sans-serif;
+}
+   .contact-box p{
+    line-height:1.9;
+    color:#dddddd;
+}
+
+/* =========================
+FOOTER
+========================= */
+
+footer{
+    background:#000814;
+    text-align:center;
+    padding:35px;
+    border-top:1px solid rgba(255,255,255,0.06);
+    color:#d4d4d4;
+}
+
+/* =========================
+WHATSAPP
+========================= */
+
+.whatsapp-float{
+    position:fixed;
+
+
+
+    width:72px;
+
+    height:72px;
+
+    bottom:30px;
+
+    right:30px;
+
+    background:#25D366;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    box-shadow:
+    0 0 20px rgba(0,0,0,0.45);
+
+    z-index:999;
+
+    transition:0.3s;
+}
+
+.whatsapp-float:hover{
+
+    transform:scale(1.08);
+}
+
+.whatsapp-float img{
+
+    width:38px;
+}
+
+/* =========================
+RESPONSIVE
+========================= */
+
+@media(max-width:900px){
+
+.hero{
+
+    height:auto;
+
+    padding:120px 0;
+}
+
+.hero h1{
+
+    font-size:48px;
+}
+
+.nav-links{
+
+    display:none;
+}
+
+.sale-box{
+
+    grid-template-columns:1fr;
+}
+
+.section-title{
+
+    font-size:40px;
+}
+
+}
+.about{
+    width:90%;
+    max-width:1200px;
+    margin:80px auto;
+    padding:40px;
+    background:#08172b;
+    border-radius:12px;
+    border:1px solid rgba(242,183,5,0.15);
+}
+
+.about h2{
+    color:#f2b705;
+    font-size:40px;
+    margin-bottom:20px;
+}
+
+.about h3{
+    color:#ffffff;
+    margin-top:25px;
+    margin-bottom:15px;
+}
+
+.about p{
+    line-height:1.8;
+    margin-bottom:15px;
+    color:#dddddd;
+}
+
+.about ul{
+    margin-left:25px;
+    line-height:2;
+    color:#dddddd;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="container navbar">
+    <div class="logo">
+
+        <img src="img/webs.jpg"        >
+
+        <span></span>
+
+    </div>
+
+    <nav class="nav-links">
+
+        <a href="#inicio">Inicio</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#industrias">Industrias</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#contacto">Contacto</a>
+
+    </nav>
+
+</div>
+
+</header>
+
+<section class="hero">
+
+<div class="container hero-content">
+
+<h1>
+Soluciones industriales <br>
+<span>que construyen el futuro</span>
+</h1>
+
+<p>
+Brindamos servicios metalúrgicos, mantenimiento industrial,
+trabajos en acero inoxidable,
+calderería, tornería, montaje y soluciones para la industria naval,
+oil & gas y sectores industriales de alta exigencia.
+</p>
+
+<div class="buttons">
+
+<a href="https://wa.me/5492901413322" class="btn btn-yellow">
+Consultar por WhatsApp
+</a>
+
+<a href="#" class="btn btn-dark">
+Solicitar presupuesto
+</a>
+
+
+
+<a href="jejeje.html"class="btn btn-yellow">
+Trabajos realizados
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="features">
+
+<div class="container">
+
+<div class="features-grid">
+
+<div class="feature-box">
+<h3>Experiencia</h3>
+<p> Con 23 Años de trayectoria respaldan nuestro trabajo metalúrgico.</p>
+</div>
+
+<div class="feature-box">
+<h3>Calidad</h3>
+<p>Compromiso total con la calidad y los procesos.</p>
+</div>
+
+<div class="feature-box">
+<h3>Seguridad</h3>
+<p>Trabajamos bajo normas y estándares industriales.</p>
+</div>
+
+<div class="feature-box">
+<h3>Compromiso</h3>
+<p>Cumplimos con los plazos y necesidades del cliente.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="services container">
+
+<h2 class="section-title">
+Nuestros Servicios
+</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<img src="img/TORNO1.jpg">
+
+<div class="card-content">
+
+<h3>Tornería</h3>
+
+<p>
+Piezas mecanizadas y trabajos de alta precisión industrial.
+</p>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="img/caldereria.jpg">
+
+<div class="card-content">
+
+<h3>Calderería</h3>
+
+<p>
+Fabricación y reparación de estructuras y recipientes.
+</p>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="img/inox.jpg">
+
+<div class="card-content">
+
+<h3>Acero inoxidable</h3>
+
+<p>
+Trabajos para industria  naval e industrial.
+</p>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="img/mante.jpg">
+
+<div class="card-content">
+
+<h3>Mantenimiento Industrial</h3>
+
+<p>
+Mantenimiento preventivo y correctivo de equipos.
+</p>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="img/estru.jpg">
+
+<div class="card-content">
+
+<h3>Montaje Industrial</h3>
+
+<p>
+Montaje y desmontaje de estructuras y cañerías.
+</p>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="img/cinta.jpg">
+
+<div class="card-content">
+
+<h3>Cintas transportadoras</h3>
+
+<p>
+Reparación y mantenimiento de cintas transportadoras.
+</p>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="img/palo.jpg">
+
+<div class="card-content">
+
+<h3>Soldaduras Calificadas</h3>
+
+<p>
+Procesos calificados para diferentes materiales industriales.
+</p>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="img/cal.jpg">
+
+<div class="card-content">
+
+<h3>Industria Naval</h3>
+
+<p>
+Servicios industriales y mantenimiento para embarcaciones.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="sale-box">
+
+<div>
+
+<img src="img/venta/bomba ventas.jpg">
+
+</div>
+
+<div class="sale-content">
+
+<h2>A LA VENTA</h2>
+
+<h3>Bomba Inyectora de Gasoil</h3>
+
+<p>
+Equipo reacondicionado en excelente estado.
+Ideal para aplicaciones industriales y maquinaria.
+Consultar disponibilidad, especificaciones y precio.
+</p>
+
+<a href="https://wa.me/5492901413322" class="btn btn-yellow">
+Consultar ahora
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="contact">
+
+<div class="container">
+
+<div class="contact-grid">
+
+<div class="contact-box">
+
+<h3>Hs Austral sas</h3>
+
+<p>
+Soluciones industriales para la industria naval,
+metalúrgica, petrolera y mantenimiento industrial.
+</p>
+
+</div>
+
+<div class="contact-box">
+
+<h3>Ubicación</h3>
+
+<p>
+Ushuaia, Tierra del Fuego<br>
+Argentina
+
+</p>
+<img src="img/">
+<a href="img/ubicacion.jpg" target="_blank">
+    <button>Ver ubicación del taller</button>
+</a>
+
+
+<br><br>
+
+<img id="foto" src="foto.jpg" style="display:none;" width="500">
+</div>
+
+<div class="contact-box">
+
+<h3>Contacto</h3>
+
+<p>
+Teléfono: 2901-413322<br>
+Email: hs.austral.sas@gmail.com
+</p>
+<section id="nosotros" class="about"> NOSOTROS: HS Austral SAS es una empresa dedicada a las reparaciones navales e industriales, con más de 23 años de experiencia brindando soluciones técnicas para el sector marítimo, pesquero e industrial. Nuestra trayectoria comenzó trabajando directamente sobre buques pesqueros y embarcaciones de distintas flotas nacionales, desarrollando trabajos de tornería, mecánica, calderería, acero inoxidable, estructuras metálicas, mantenimiento industrial y montaje de equipos. Contamos con personal técnico calificado, equipamiento propio y la experiencia necesaria para ejecutar trabajos de fabricación, reparación y mantenimiento, tanto en taller como a bordo, garantizando calidad, seguridad y cumplimiento de los plazos establecidos. Trabajamos con compromiso, responsabilidad y atención personalizada, ofreciendo soluciones adaptadas a las necesidades de cada cliente. Nuestros Servicios • Tornería y mecanizado de piezas. • Calderería naval e industrial. • Fabricación y reparación en acero inoxidable. • Reparación de máquinas auxiliares. • Montajes y estructuras metálicas. • Mantenimiento industrial preventivo y correctivo. • Reparaciones navales y pesqueras. </section>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>
+© 2026 Hs Austral sas - Todos los derechos reservados.
+</p>
+
+</footer>
+
+<a class="whatsapp-float" href="https://wa.me/5492901413322">
+
+<img src="img/WHAT.jpg">
+
+</a>
+
+<script>
+
+/* =========================
+HEADER EFFECT
+========================= */
+
+window.addEventListener('scroll', function(){
+
+const header = document.querySelector('header');
+
+if(window.scrollY > 50){
+
+    header.style.background = '#000814';
+
+}else{
+
+    header.style.background = 'rgba(2,11,24,0.95)';
+}
+
+});
+
+</script>
+
+</body>
+</html>
