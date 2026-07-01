@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>HS Austral SAS - Trabajos Realizados</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#07111f;
+    color:white;
+    font-family:'Roboto',sans-serif;
+}
+
+header{
+    background:#020b18;
+    border-bottom:2px solid #f2b705;
+    padding:25px;
+    text-align:center;
+}
+
+.logo{
+    font-family:'Oswald',sans-serif;
+    font-size:42px;
+    font-weight:700;
+}
+
+.logo span{
+    color:#f2b705;
+}
+
+/* Fotos y videos */
+
+.foto img,
+.foto video{
+    width:100%;
+    height:260px;
+    object-fit:cover;
+    border-radius:10px;
+    display:block;
+}
+
+/* Banner principal */
+
+.banner-imagen{
+    width:100%;
+    height:450px;
+    overflow:hidden;
+    position:relative;
+}
+
+.banner-imagen img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
+.banner-imagen::after{
+    content:'';
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.45);
+}
+
+.container{
+    width:90%;
+    max-width:1300px;
+    margin:auto;
+}
+
+.trabajo{
+    background:#08172b;
+    border:1px solid rgba(242,183,5,0.15);
+    border-radius:12px;
+    padding:25px;
+    margin-bottom:40px;
+}
+
+.trabajo h2{
+    font-family:'Oswald',sans-serif;
+    color:#c2940b;
+    margin-bottom:15px;
+    font-size:34px;
+}
+
+.trabajo p{
+    color:#ddd;
+    line-height:1.8;
+    margin-bottom:25px;
+}
+
+.galeria{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:20px;
+}
+
+.foto{
+    overflow:hidden;
+    border-radius:10px;
+}
+
+.foto img:hover{
+    transform:scale(1.03);
+
+    box-shadow:
+    0 0 15px rgba(6,160,174,0.35),
+    0 0 35px rgba(4,164,159,0.15);
+
+    transition:0.4s;
+}
+
+.foto span{
+    display:block;
+    text-align:center;
+    margin-top:10px;
+    color:#9e9c08;
+}
+
+.volver{
+    text-align:center;
+    margin:50px 0;
+}
+
+.volver a{
+    text-decoration:none;
+    background:#f2b705;
+    color:black;
+    padding:15px 30px;
+    border-radius:6px;
+    font-weight:bold;
+}
+
+footer{
+    background:#000814;
+    text-align:center;
+    padding:30px;
+    margin-top:50px;
+    border-top:1px solid rgba(255,255,255,0.1);
+}
+
+/* Portada principal */
+
+.foto-portada2{
+    width:90%;
+    max-width:1200px;
+    height:350px;
+    margin:20px auto 40px auto;
+    overflow:hidden;
+    border:2px solid #f2b705;
+    border-radius:12px;
+    box-shadow:0 0 20px rgba(242,183,5,0.25);
+}
+
+.foto-portada2 img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
+/* Texto descriptivo */
+
+.descripcion{
+    max-width:1100px;
+    margin:30px auto;
+    text-align:center;
+    color:#ddd;
+    line-height:1.8;
+    padding:0 20px;
+}
+
+@media(max-width:900px){
+
+    .trabajo h2{
+        font-size:28px;
+    }
+
+    .foto-portada2{
+        height:250px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+    <body>
+
+<header>
+    <h1><span style="color:#f2b705;">HS</span> AUSTRAL SAS</h1>
+    <h3>TRABAJOS REALIZADOS</h3>
+</header>
+
+<section class="foto-portada2">
+    <img src="img/portada2.jpg" alt="Portada HS Austral SAS">
+</section>
+
+<div class="descripcion">
+    <h2>
+        Algunos de los trabajos desarrollados por nuestro taller
+        en tornería, mecánica ligera, calderería, acero inoxidable
+        y estructuras metálicas.
+    </h2>
+</div>
+
+<div class="container">
+
+<section class="trabajo">
+
+<h2>TORNERÍA</h2>
+
+<p>
+Control y mecanizado de eje naval destinado al reemplazo de un piñón de acople, realizando verificación dimensional y puesta en diámetro para su correcta instalación.
+</p>
+
+<p>
+Recuperación y puesta en diámetro de un eje naval para reemplazo de piñón de acople. Reacondicionamiento y mecanizado de una válvula de tres vías.
+</p>
+
+<div class="galeria">
+
+<div class="foto">
+<img src="img/torno1.jpg" alt="Tornería inicio">
+<span>Inicio</span>
+</div>
+
+<div class="foto">
+<video controls>
+<source src="img/torno.mp4" type="video/mp4">
+</video>
+<span>Proceso</span>
+</div>
+
+<div class="foto">
+<img src="img/torno3.jpg" alt="Tornería finalizado">
+<span>Finalizado</span>
+</div>
+
+</div>
+
+</section>
+
+<section class="trabajo">
+
+<h2>MECÁNICA LIGERA</h2>
+
+<p>
+Reparación y mantenimiento de sistema de transmisión naval, realizando el desarme de la caja reductora, extracción del PTO y reemplazo de componentes mecánicos críticos para asegurar la continuidad operativa de los equipos auxiliares del buque.
+</p>
+
+<div class="galeria">
+
+<div class="foto">
+<video controls>
+<source src="img/mecanica1.mp4" type="video/mp4">
+</video>
+<span>Inicio</span>
+</div>
+
+<div class="foto">
+<video controls>
+<source src="img/mecanica.mp4" type="video/mp4">
+</video>
+<span>Proceso</span>
+</div>
+
+<div class="foto">
+<video controls>
+<source src="img/mecanica3.mp4" type="video/mp4">
+</video>
+<span>Finalizado</span>
+</div>
+
+</div>
+
+</section>
+
+<section class="trabajo">
+
+<h2>CALDERERÍA</h2>
+
+<p>
+Renovación integral de palo principal de buque, incluyendo relevamiento dimensional, desarrollo de planos, desmontaje de la estructura original, fabricación completa en taller y posterior montaje a bordo durante la estadía del buque en dique seco. Se realizaron además trabajos de reacondicionamiento estructural, soldadura y terminaciones de protección superficial.
+</p>
+
+<div class="galeria">
+
+<div class="foto">
+<img src="img/cald1.jpg" alt="Calderería inicio">
+<span>Inicio</span>
+</div>
+
+<div class="foto">
+<img src="img/cald2.jpg" alt="Calderería proceso">
+<span>Proceso</span>
+</div>
+
+<div class="foto">
+<img src="img/cald3.jpg" alt="Calderería finalizado">
+<span>Finalizado</span>
+</div>
+
+</div>
+
+</section>
+
+<section class="trabajo">
+
+<h2>ACERO INOXIDABLE</h2>
+
+<p>
+Reacondicionamiento integral de sistemas de transporte industrial mediante la reparación y modificación de cintas transportadoras. El trabajo incluyó revisión de transmisiones primarias y secundarias, reemplazo de rodamientos y retenes, reparación de soportes de motor, reconstrucción de estructuras de soporte, barillajes y cadenas de acero inoxidable, además de tareas de soldadura TIG (argón), limpieza química y puesta en servicio de los equipos.
+</p>
+
+<div class="galeria">
+
+<div class="foto">
+<img src="img/acer1.jpg" alt="Acero inoxidable inicio">
+<span>Inicio</span>
+</div>
+
+<div class="foto">
+<img src="img/acer2.jpg" alt="Acero inoxidable proceso">
+<span>Proceso</span>
+</div>
+
+<div class="foto">
+<img src="img/acer3.jpg" alt="Acero inoxidable finalizado">
+<span>Finalizado</span>
+</div>
+
+</div>
+
+</section>
+
+<section class="trabajo">
+
+<h2>MONTAJES Y ESTRUCTURAS METÁLICAS</h2>
+
+<p>
+Reparación integral de tangones navales mediante desmontaje, mecanizado de componentes, fabricación de nuevos bujes y elementos de desgaste, reemplazo de la placa central de bisagra y posterior montaje a bordo para su puesta en funcionamiento.
+</p>
+
+<div class="galeria">
+
+<div class="foto">
+<img src="img/ok1.jpg" alt="Montaje inicio">
+<span>Inicio</span>
+</div>
+
+<div class="foto">
+<img src="img/mon2.jpg" alt="Montaje proceso">
+<span>Proceso</span>
+</div>
+
+<div class="foto">
+<img src="img/ok3.jpg" alt="Montaje finalizado">
+<span>Finalizado</span>
+</div>
+
+</div>
+
+</section>
+
+<div class="volver">
+<a href="jejeje.html">Volver al Inicio</a>
+</div>
+
+
+
+<section class="redes-sociales">
+
+<h1>Redes Sociales</h1>
+
+
+
+<a href="https://www.instagram.com/tu_usuario" target="_blank">
+<img src="img/instagram.jpg" alt="Instagram">
+</a>
+
+
+
+<a href="https://www.linkedin.com/in/tu_usuario" target="_blank">
+<img src="img/linkedin.jpg" alt="LinkedIn">
+
+</a>
+
+<a href="https://wa.me/5492901413322" target="_blank">
+<img src="img/whatsapp.jpg" alt="whatsapp">
+</a>
+
+</div>
+
+</section>
+
+</div>
+
+<footer>
+© 2026 HS AUSTRAL SAS - Trabajos Realizados
+</footer>
+
+</body>
+</html>
